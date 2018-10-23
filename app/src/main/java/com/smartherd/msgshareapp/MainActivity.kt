@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(Intent.EXTRA_TEXT, message)
             intent.type = "text/plain"
 
-            startActivity(Intent.createChooser(intent, "Share to : "))
+            startActivity(Intent.createChooser(intent, "Please select app: "))
 
         }
 

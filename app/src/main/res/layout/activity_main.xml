@@ -23,16 +23,22 @@
             android:inputType="textPersonName"
             android:text="Name"
             android:ems="10"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
             android:id="@+id/etUserMessage"
-            android:layout_marginTop="147dp"
-            android:hint="Enter your Message"/>
+            android:layout_marginTop="167dp"
+            android:hint="Enter your Message" android:layout_alignParentEnd="true"/>
     <Button
             android:text="Send Data To Next Activity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnSendMsgToNextActivity"
-            android:layout_centerInParent="true"/>
+            android:layout_marginTop="29dp" android:layout_below="@+id/etUserMessage"/>
+    <Button
+            android:text="Share to other apps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+            android:id="@+id/btnShareToOtherApps"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/btnSendMsgToNextActivity"/>
 
 </RelativeLayout>

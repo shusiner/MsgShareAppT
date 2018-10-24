@@ -9,5 +9,6 @@
     <string name="btn_clicked">Button is Clicked</string>
 
     <string name="btn_was_clicked">Button was clicked!</string>
+    <string name="title_activity_contacts">ContactsActivity</string>
 
 </resources>

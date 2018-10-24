@@ -25,7 +25,7 @@ class SecondActivity : AppCompatActivity() {
         val bundle : Bundle? = intent.extras
 
         bundle?.let {
-            val msg = bundle.getString(Constants.USER_MSG_KEY)
+            val msg = bundle.getString(Constants.USER_MSG_KEY)!!
             showToast(msg)
             txvUserMessage.text = msg
         }

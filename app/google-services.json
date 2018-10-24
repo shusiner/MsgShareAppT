@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "360584732846",
+    "firebase_url": "https://test-bb11b.firebaseio.com",
+    "project_id": "test-bb11b",
+    "storage_bucket": "test-bb11b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360584732846:android:2b1e8f7d22274c1b",
+        "android_client_info": {
+          "package_name": "com.smartherd.msgshareapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360584732846-e48nlo9tdo3taao80snjgk5p3e577g6e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.smartherd.msgshareapp",
+            "certificate_hash": "0d92d589ced5212ec3b417efa68696b8448e027c"
+          }
+        },
+        {
+          "client_id": "360584732846-humvdf3vuspkic67nr8c6hb07mj4snac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlWgfRZiWNsPRJVPYOks2QX7_Co1Nk73s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "360584732846-humvdf3vuspkic67nr8c6hb07mj4snac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -33,7 +33,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnSendMsgToNextActivity"
-            android:layout_marginTop="29dp" android:layout_below="@+id/etUserMessage"/>
+            android:layout_marginTop="16dp" android:layout_below="@+id/etUserMessage"
+            android:layout_centerHorizontal="true"/>
     <Button
             android:text="@string/btn_share_to_apps"
             android:layout_width="match_parent"
@@ -46,8 +47,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
             android:id="@+id/btnRecycleViewDemo"
-            android:layout_marginBottom="64dp"/>
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/btnShareToOtherApps"/>
+    <Button
+            android:text="Show Contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+            android:id="@+id/btnContact"
+            android:layout_marginTop="16dp" android:layout_below="@+id/btnRecycleViewDemo"/>
 
 </RelativeLayout>

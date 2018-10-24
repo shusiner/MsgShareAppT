@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.google.firebase.firestore.FirebaseFirestore
 import com.smartherd.msgshareapp.Constants
 import com.smartherd.msgshareapp.R
 import com.smartherd.msgshareapp.showToast
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         val TAG: String = MainActivity::class.java.simpleName
     }
 
+    var db = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             showToast(resources.getString(R.string.btn_was_clicked),Toast.LENGTH_LONG)
 
             //Toast.makeText(this,"Button was clicked!",Toast.LENGTH_SHORT).show()
+        }
+
+        btnContact.setOnClickListener {
+
         }
 
         btnSendMsgToNextActivity.setOnClickListener {

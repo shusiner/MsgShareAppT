@@ -6,6 +6,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filterable
 import android.widget.Toast
 import com.smartherd.msgshareapp.models.Hobby
 import com.smartherd.msgshareapp.R
@@ -13,7 +15,44 @@ import com.smartherd.msgshareapp.activities.MainActivity
 import com.smartherd.msgshareapp.showToast
 import kotlinx.android.synthetic.main.list_item.view.*
 
-class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) : RecyclerView.Adapter<HobbiesAdapter.MyViewHolder>() {
+class HobbiesAdapter(
+    val context: Context,
+    private var hobbies: MutableList<Hobby>,
+    private val hobbies_full: List<Hobby> = hobbies.toList() )
+    : RecyclerView.Adapter<HobbiesAdapter.MyViewHolder>(), Filterable {
+
+    override fun getFilter(): Filter {
+        return hobbiesFilter;
+    }
+
+    private var hobbiesFilter = object: Filter() {
+        override fun performFiltering(constraint: CharSequence?): FilterResults {
+            var filteredList = mutableListOf<Hobby>()
+
+            if (constraint == null || constraint.isEmpty())
+                filteredList = hobbies_full.toMutableList()
+            else {
+                var filterPattern = constraint.toString().toLowerCase().trim()
+
+                for (item in hobbies_full) {
+                    if (item.title.toLowerCase().contains((filterPattern)))
+                        filteredList.add(item)
+                }
+            }
+
+            var results = FilterResults()
+            results.values = filteredList
+
+            return results
+        }
+
+        override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+            hobbies.clear()
+            hobbies.addAll( results!!.values as List<Hobby>)
+            notifyDataSetChanged()
+        }
+    }
+
 
     companion object {
         val TAG: String = HobbiesAdapter::class.java.simpleName

@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         btnShowToast.setOnClickListener {
             Log.i(TAG, "Button was clicked !")
             showToast("Button was clicked!")
+            showToast("Button was clicked!")
 
             //Toast.makeText(this,"Button was clicked!",Toast.LENGTH_SHORT).show()
         }
